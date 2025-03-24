@@ -225,17 +225,20 @@ const Index = () => {
           </p>
           
           <motion.div 
-            className="mt-12 inline-flex"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
+            className="mt-8 text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true }}
           >
+            <p className="text-muted-foreground mb-3">Pour accéder à la version déjà développée, consultez :</p>
             <a 
               href="https://elvectogo.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-primary text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+              className="text-primary font-medium hover:underline inline-flex items-center"
             >
-              Voir le site démo
+              https://elvectogo.vercel.app/
             </a>
           </motion.div>
         </motion.div>
