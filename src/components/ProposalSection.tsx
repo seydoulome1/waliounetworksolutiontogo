@@ -1,17 +1,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface ProposalSectionProps {
   title: string;
   content: React.ReactNode;
   number: number;
+  className?: string;
 }
 
-const ProposalSection: React.FC<ProposalSectionProps> = ({ title, content, number }) => {
+const ProposalSection: React.FC<ProposalSectionProps> = ({ title, content, number, className }) => {
   return (
     <motion.section
-      className="py-12 border-b border-border last:border-b-0"
+      className={cn("py-12 border-b border-border last:border-b-0", className)}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.215, 0.61, 0.355, 1] }}

@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Header from '../components/Header';
 import ProposalSection from '../components/ProposalSection';
 import ContactButton from '../components/ContactButton';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Index = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -123,13 +124,120 @@ const Index = () => {
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm p-4 border border-border">
-                  <h5 className="font-semibold mb-2">2. Plan d'hébergement premium</h5>
-                  <ul className="text-muted-foreground space-y-1">
-                    <li>• Certificat SSL offert à vie.</li>
-                    <li>• 300 Go d'espace disque SSD, trafic illimité, et sauvegardes journalières.</li>
-                    <li>• Protection Whois gratuite.</li>
-                    <li>• Hébergement ultra-performant sur 2 ans.</li>
-                  </ul>
+                  <h5 className="font-semibold mb-2">2. Plan d'hébergement premium LWS Performance</h5>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <Card className="bg-gradient-to-b from-white to-blue-50">
+                      <CardContent className="p-4 pt-4">
+                        <div className="flex items-center mb-3">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+                            </svg>
+                          </div>
+                          <h6 className="font-semibold">Domaines</h6>
+                        </div>
+                        <ul className="space-y-2 ml-2">
+                          <li className="flex items-center">
+                            <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                            <span>2 noms de domaine offerts</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                            <span>Certificat SSL (https) sécurisé</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                            <span>Protection Whois gratuite</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-gradient-to-b from-white to-blue-50">
+                      <CardContent className="p-4 pt-4">
+                        <div className="flex items-center mb-3">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                          </div>
+                          <h6 className="font-semibold">Mails</h6>
+                        </div>
+                        <ul className="space-y-2 ml-2">
+                          <li className="flex items-center">
+                            <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                            <span>Adresses e-mail pro illimitées</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                            <span>Webmail accessible partout</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                            <span>Anti-spam et anti-virus intégrés</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-gradient-to-b from-white to-blue-50 md:col-span-2">
+                      <CardContent className="p-4 pt-4">
+                        <div className="flex items-center mb-3">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                            </svg>
+                          </div>
+                          <h6 className="font-semibold">Hébergement</h6>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+                          <ul className="space-y-2 ml-2">
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>300 Go d'espace disque SSD</span>
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>Trafic illimité</span>
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>Sauvegardes journalières</span>
+                            </li>
+                          </ul>
+                          <ul className="space-y-2 ml-2">
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>PHP / MySQL optimisés</span>
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>WordPress, PrestaShop pré-installés</span>
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>WordPress Manager</span>
+                            </li>
+                          </ul>
+                          <ul className="space-y-2 ml-2">
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>Panneau de contrôle intuitif</span>
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>Support prioritaire 24/7</span>
+                            </li>
+                            <li className="flex items-center">
+                              <span className="w-4 h-4 text-green-600 mr-2">✓</span>
+                              <span>Migration gratuite</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm p-4 border border-border">
