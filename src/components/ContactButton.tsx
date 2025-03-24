@@ -26,7 +26,7 @@ const ContactButton: React.FC<ContactButtonProps> = ({ phone1, phone2 }) => {
           className="bg-primary text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-2"
         >
           <Phone size={20} className="animate-pulse-subtle" />
-          <span className="font-medium">Contactez-nous</span>
+          <span className="font-medium">+228 71303662</span>
         </button>
 
         <AnimatePresence>
